@@ -139,7 +139,7 @@ while(<IP>) {
     my (@IP)=split(/\s+/, $_);
     my @selIP;
     foreach my $ip (@IP) {
-        next if ($ip eq '127.0.0.1');
+        next if (($ip eq '127.0.0.1')||($ip eq '127.0.1.1'));
         push(@selIP, $ip);
     }        
     $info{'IP'}->{''} = join(' ', @selIP);
